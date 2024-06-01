@@ -1,0 +1,175 @@
+1. List the directory contents date wise sorted. ( man ls)
+-->ls -lt -c
+total 8
+drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 18:55 Assignment02
+drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 18:54 Assignment01
+
+
+
+2. List the directory contents size wise sorted.(man ls)
+-->ls -lt -s
+total 8
+4 drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 19:09 Assignment02
+4 drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 18:54 Assignment01
+
+
+
+3. 3. List directory contents along with their inode no. (man ls)
+-->ls -i
+5507178 Assignment01  5507181 Assignment02 
+
+
+
+4. List the contents of the subdirectory.
+-->ls -R
+.:
+Assignment01  Assignment02
+
+./Assignment01:
+Assignment01  Assignment02  Marvel.txt
+
+./Assignment02:
+Assignment02.txt
+
+
+5. Create a file, write your surname and name in it and
+save.
+i. now open the same file and add your address in it and
+save.
+ii. reopen the same file and check your name and address in
+it.
+-->cat > File01.txt
+Pratik
+Khot
+
+i)  cat >> File01.txt
+Khot
+
+
+ii)  cat  File01.txt
+Pratik
+khot
+kolhapur
+
+
+
+6. how to change the time stamp of file (man touch)
+-->sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS$ touch File01.txt
+
+
+
+7. Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+
+-->
+
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS$ touch File01.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS$ mkdir one
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS$ cd one
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ touch 1.txt 11.txt 111.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ mkdir two
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ cd two
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two$ touch 2.txt 22.txt 222.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two$ mkdir three
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two$ cd three
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three$ touch 3.txt 33.txt 333.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three$ mkdir four
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three$ cd four
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four$ touch 4.txt 44.txt 444.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four$ mkdir five
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four$ cd five
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ touch 5.txt 55.txt 555.txt
+sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ cd ~
+
+
+
+
+
+8. Considering above directory structure , Do following
+operations :
+i. list the directory contents of directory named
+"five" from current directory (i.e. home directory).
+1ii. write your name in a file named "44.txt" of
+directory "four" from current directory.
+iii. remove the file named "555.txt" from directory
+"five" from current directory.
+iv. change directory to five
+one/two/three/four/five/ ).
+( i.e. cd
+v. write your course name in file named "3.txt" which
+resides in directory "three" from current directory (i.e.
+five).also read the same file.
+vi. list the contents of directory "two" from current
+directory (i.e. five).
+vii. remove file named "222.txt" which belongs to
+directory "two" from current directory (i.e. five)
+viii. now change the directory to "one"
+ix. remove all files only from directory named "five"
+from current directory (i.e. one)
+x. remove directory named "five" from current directory
+(i.e. one)
+xi. remove whole directory named "four" from current
+directory (i.e. one)
+xii. change to your home directory.
+
+
+-->
+i)	sunbeam@Pratik-s:~$ ls /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five/
+555.txt  55.txt  5.txt
+
+ii)	sunbeam@Pratik-s:~$ cat >> /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/44.txt
+Pratik khot
+
+iii)	sunbeam@Pratik-s:~$ rm /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five/555.txt
+
+
+iv)	sunbeam@Pratik-s:~$ cd /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five/
+
+
+
+v)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ cat >> /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/3.txt
+PG-DAC  
+
+
+vi)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ ls ../../../../two
+222.txt  22.txt  2.txt  three
+
+
+vii)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ rm ../../../../two/222.txt
+
+
+viii)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/four/five$ cd /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/
+
+
+ix)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ rm -R two/three/four/five/*
+
+
+
+x)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ rmdir -R two/three/four/five/
+
+
+xi)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ rm -rf one/two/three/four
+
+
+xii)	sunbeam@Pratik-s:~/Desktop/Sunbeam/OS/Assignments/OS/one$ cd ~
+
+
+9. 9. change the time stamp of file named "3.txt" which resides
+in directory named "three".(man touch)
+-->	sunbeam@Pratik-s:~$ touch /home/sunbeam/Desktop/Sunbeam/OS/Assignments/OS/one/two/three/3.txt
+
